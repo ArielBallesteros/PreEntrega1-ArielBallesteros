@@ -1,31 +1,64 @@
-.p {
-  color: azure;
+.navbar-brand p {
+  font-size: larger;
+  margin: 0px;
+  padding: 0px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 0px;
-  padding: 10px;
+  color: azure !important;
 }
 
-.navbar {
+.navbar-brand p :hover {
+  transform: scale(1.05) !important;
+  transition: 0.3s !important;
+}
+
+.navbar-brand img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+}
+
+.navbar-brand {
+  margin: 0px;
+  color: azure !important;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
-.navbarimg {
-  padding: 10px;
-}
-
-.linknav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
+.navbar-brand :hover {
+  transform: scale(1.05) !important;
+  transition: 0.3s !important;
 }
 
 .nav-item {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  padding: 6px;
+  
+}
+.nav-item :hover {
+  transform: scale(1.05) !important;
+  transition: 0.3s !important;
+}
+
+.nav-link {
+  color: azure !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-outline-success {
+  color: azure !important;
+}
+.navbar-toggler {
+  color: azure !important;
+}
+.navbar-toggler-icon {
+  color: azure !important;
+  background-color: azure !important;
+  border-radius: 3px;
 }

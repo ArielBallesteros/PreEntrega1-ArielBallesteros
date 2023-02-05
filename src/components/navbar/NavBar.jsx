@@ -1,20 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./navbar.css";
+import "./navBar.css";
 import { CartWidget } from "../CartWidget/CartWidget";
 
 export function NavBar() {
   return (
-    <div>
-      <nav
-        className="navbar bg-dark  navbar-expand-lg bg-body-tertiary"
-        data-bs-theme="dark"
-      >
+    <>
+      <nav className="navbar fixed-top navbar-expand-lg bg-dark bg-gradient">
         <div className="container-fluid">
-          <Link className="navbar" href="">
-            <img src="./img/ragnar.png" width="90" className="navbarimg"></img>
-            <p className="p">Ragnar Tattoo</p>
-          </Link>
+          <a className="navbar-brand" href="./index.html">
+            <img
+              src="https://res.cloudinary.com/ariel666/image/upload/v1662580277/ultimoragnar_yttkel.png"
+              alt="logo"
+            />
+            <p>RagnarTattoo</p>
+          </a>
           <button
             className="navbar-toggler"
             type="button"
@@ -29,63 +29,73 @@ export function NavBar() {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item dropdown">
-                <Link
-                  className="linknav dropdown-toggle"
-                  href="#"
+                <a
+                 className="nav-link dropdown-toggle"
+                  href="./pages/tienda.html"
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  <p className="p"> Tienda </p>
-                </Link>
+                  Tienda
+                </a>
                 <ul className="dropdown-menu">
                   <li>
-                    <Link className="dropdown-item" href="">
+                    <a className="dropdown-item" href="">
                       Cremas
-                    </Link>
+                    </a>
                   </li>
                   <li>
-                    <Link className="dropdown-item" href="">
+                    <a className="dropdown-item" href="">
                       Tintas
-                    </Link>
+                    </a>
                   </li>
                   <li>
-                    <Link className="dropdown-item" href="">
+                    <hr className="dropdown-divider" />
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="">
                       Todos los productos
-                    </Link>
+                    </a>
                   </li>
                 </ul>
               </li>
-              <li className="linknav">
-                <Link className="linknav" href="">
-                  <p className="p"> Ubicacion </p>
-                </Link>
-              </li>
-              <li className="linknav">
-                <Link className="linknav" href="">
-                  <p className="p"> Contacto </p>
-                </Link>
+              <li className="nav-item">
+                <a className="nav-link" href="">
+                  Ubicacion
+                </a>
               </li>
               <li className="nav-item">
-                <Link className="linknav" href="">
-                  <CartWidget />
-                </Link>
+                <a className="nav-link" href="">
+                  Turnos
+                </a>
               </li>
+              <li className="nav-item">
+                <a className="nav-link" href="">
+                  Contacto
+                </a>
+              </li>
+
+              <li className="nav-item">
+                <a className="nav-link" href="">
+                  <CartWidget />
+                </a>
+              </li>
+              
             </ul>
             <form className="d-flex" role="search">
               <input
                 className="form-control me-2"
                 type="search"
-                placeholder="Buscador"
+                placeholder="Busca tu estilo"
                 aria-label="Search"
-              ></input>
+              />
               <button className="btn btn-outline-success" type="submit">
-                BUSCAR
+                Buscar
               </button>
             </form>
           </div>
         </div>
       </nav>
-    </div>
+    </>
   );
 }
