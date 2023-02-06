@@ -1,16 +1,23 @@
-import Item from "../Item/Item"
-const ItemDetail = ({item})=>{
-    return(
-        <div className="row my-5">
-            <div className="col-md-6 offset-md-3 text-center">
-                <img src={item.img}/>
-                <h1>{item.nombre}</h1>
-                <p>{item.desc}</p>
-                <p><b>${item.precio}</b></p>
+import { stockProductos } from "../Data/stockProductos"
 
-            </div>
-        </div>
-    )
-}
 
-export default ItemDetail
+const getAll = ()=>{
+    return new Promise ((resolve,reject) =>{
+        setTimeout(() =>{
+            resolve(stockProductos);
+        }, [500]);
+    });
+};
+
+const get = (id) => {
+    return new Promise ((resolve,reject)=>{
+        setTimeout(()=>{
+            resolve(stockProductos.find((elem) => elem.id.toString()=== id));
+        },[500]);
+    });
+};
+
+const add = (product) => {};
+
+export const ItemDetail = {getAll, get ,add}
+   
