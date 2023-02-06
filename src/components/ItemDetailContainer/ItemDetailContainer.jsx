@@ -1,7 +1,7 @@
 import React, {useState, useEffect}from "react";
 import {useParams} from "react-router-dom";
-import {stockProductos} from "../Data/stockProductos";
 import ItemDetail  from "../ItemDetail/ItemDetail";
+import { stockProductos } from "../Data/stockProductos";
 
 
 const ItemDetailContainer = () =>{
@@ -11,8 +11,8 @@ const ItemDetailContainer = () =>{
     useEffect(()=>{
         const promise = new Promise((resolve)=>{
             setTimeout(()=>{
-                resolve(stockProductos.find(item => item.id === parseInt(id)));
-            }, 3000);
+                resolve(stockProductos.find(item => item.id.toString === id));
+            }, 1000);
 
         });
 

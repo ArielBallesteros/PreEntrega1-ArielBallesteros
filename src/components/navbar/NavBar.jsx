@@ -8,13 +8,13 @@ export function NavBar() {
     <>
       <nav className="navbar fixed-top navbar-expand-lg bg-dark bg-gradient">
         <div className="container-fluid">
-          <a className="navbar-brand" href="./index.html">
+          <Link to="/" className="NavbarLogo">
             <img
               src="https://res.cloudinary.com/ariel666/image/upload/v1662580277/ultimoragnar_yttkel.png"
               alt="logo"
             />
-            <p>RagnarTattoo</p>
-          </a>
+            <p className="pageName">RagnarTattoo</p>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -29,15 +29,9 @@ export function NavBar() {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item dropdown">
-                <a
-                 className="nav-link dropdown-toggle"
-                  href="./pages/tienda.html"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Tienda
-                </a>
+               <Link to ="/tienda">
+                Tienda
+               </Link>
                 <ul className="dropdown-menu">
                   <li>
                     <a className="dropdown-item" href="">

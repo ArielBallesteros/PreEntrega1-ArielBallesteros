@@ -1,4 +1,4 @@
-
+import Item from "../Item/Item"
 const ItemDetail = ({item})=>{
     return(
         <div className="row my-5">

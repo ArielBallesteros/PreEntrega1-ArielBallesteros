@@ -1,5 +1,10 @@
 import { Link } from "react-router-dom";
 
+
+
+
+
+
 const Item = ({ item }) => {
   return (
     <Link to={"/item/" + item.id}>

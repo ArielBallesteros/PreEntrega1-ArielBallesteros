@@ -6,7 +6,7 @@ import { stockProductos } from "../Data/stockProductos";
 
 
 
-const itemListContainer = ()=>{
+const ItemListContainer = ()=>{
     const [items, setItems] = useState([]);
     const {id} = useParams();
 
@@ -14,7 +14,7 @@ const itemListContainer = ()=>{
         const promise = new Promise((resolve)=>{
             setTimeout(()=>{
                 resolve (id ? stockProductos.filter(item =>item.id === id): stockProductos);
-            }, 3000)
+            }, 1000)
         });
         promise.then((data)=>{
             setItems(data);
@@ -28,4 +28,4 @@ const itemListContainer = ()=>{
     )
 }
 
-export default itemListContainer
+export default ItemListContainer
